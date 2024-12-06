@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DefaultLayout from './Layout/DefaultLayout';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import ChiSiamo from './pages/ChiSiamo';
 import PostList from './pages/PostList';
 
