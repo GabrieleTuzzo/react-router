@@ -1,5 +1,4 @@
 import style from './card.module.css';
-import Button from '../Button/Button';
 import placeholder from '../../assets/placeholder.webp';
 
 function Card(props) {
@@ -28,14 +27,6 @@ function Card(props) {
                         ))}
                     </div>
                     <p>{props.content}</p>
-                </div>
-                <div className={style.ButtonWrapper}>
-                    <Button value={'Leggi di più'} color={'Blue'}></Button>
-                    <Button
-                        onClick={props.callback}
-                        value={'Elimina'}
-                        color={'Red'}
-                    ></Button>
                 </div>
             </div>
         </div>

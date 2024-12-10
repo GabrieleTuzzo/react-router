@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Button from '../components/Button/Button';
 import FormOverlay from '../components/FormOverlay/FormOverlay';
 import Card from '../components/Card/Card';
+import { Link } from 'react-router-dom';
 
 export default function PostList() {
     const [showOverlay, setShowOverlay] = useState(false);
@@ -103,22 +104,26 @@ export default function PostList() {
                             return (
                                 post.published && (
                                     <div key={post.id} className="col-6">
-                                        <Card
-                                            title={post.title}
-                                            image={
-                                                post.image
-                                                    ? BASIC_URI +
-                                                      SERVER_IMG_DIR +
-                                                      post.image
-                                                    : ''
-                                            }
-                                            content={post.content}
-                                            tags={post.tags}
-                                            published={post.published}
-                                            callback={() =>
-                                                handleDelete(post.id)
-                                            }
-                                        ></Card>
+                                        <Link
+                                            to={`http://localhost:5173/posts/${post.id}`}
+                                        >
+                                            <Card
+                                                title={post.title}
+                                                image={
+                                                    post.image
+                                                        ? BASIC_URI +
+                                                          SERVER_IMG_DIR +
+                                                          post.image
+                                                        : ''
+                                                }
+                                                content={post.content}
+                                                tags={post.tags}
+                                                published={post.published}
+                                                callback={() =>
+                                                    handleDelete(post.id)
+                                                }
+                                            ></Card>
+                                        </Link>
                                     </div>
                                 )
                             );
