@@ -46,19 +46,3 @@
     color: white;
     background-color: brown;
 }
-
-.Tag.html {
-    background-color: cornflowerblue;
-}
-
-.Tag.css {
-    background-color: mediumorchid;
-}
-
-.Tag.js {
-    background-color: mediumseagreen;
-}
-
-.Tag.php {
-    background-color: mediumturquoise;
-}
